@@ -1,0 +1,34 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section title="Usar GitHub de forma remote" id="repo-remote">
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Crear carpeta <b>.git</b> para rastrear el repositorio
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git init`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">
+        Gurdar y hacer el commits de todos los cambios realizados
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git add -am "Descripcion del commit"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">
+        Para conectar servidor local con el repositorio de gitHub
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git remote add origin + "https del repositorio"`} />
+      </div>
+    </li>
+  </ul>
+</Section>

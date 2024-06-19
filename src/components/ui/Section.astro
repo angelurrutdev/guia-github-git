@@ -1,0 +1,15 @@
+---
+import TitleSection from "./TitleSection.astro";
+
+interface Props {
+  title: string;
+  id: string;
+}
+
+const { title, id } = Astro.props;
+---
+
+<section class="mb-24 pt-20" id={id}>
+  <TitleSection title={title} />
+  <slot />
+</section>

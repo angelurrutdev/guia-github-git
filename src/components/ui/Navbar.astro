@@ -1,0 +1,40 @@
+---
+import Icons from "../../components/ui/Icon.astro";
+
+const RRSS = [
+  {
+    nombre: "LinkedIn",
+    url: "https://linkedin.com/in/angelurrutdev",
+    icon: "linkedin",
+  },
+  {
+    nombre: "GitHub",
+    url: "https://github.com/angelurrutdev",
+    icon: "github",
+  },
+];
+---
+
+<nav
+  class="flex justify-between py-3 border-b-[1px] border-gray-300 px-6 items-center fixed w-full bg-white top-0 z-10"
+>
+  <a href="/">
+    Git+
+    <span class="font-bold bg-black rounded-lg text-white p-1">GitHub</span>
+  </a>
+  <ul class="flex justify-between items-center dark:text-white text-slate-800">
+    {
+      RRSS.map(({ url, icon }) => (
+        <li class="mx-2">
+          <a
+            class="block hover:bg-gray-200 p-2 rounded-full "
+            href={url}
+            target="_blank"
+          >
+            <Icons name={icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

@@ -1,0 +1,30 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section title="Crear ramas" id="create-branch">
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Crear una rama para hacer modificaciones aparte de la rama master
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git branch + "nombre-de-la-rama"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">Ir a la rama nueva rama</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git checkout + "nombre-de-la-rama"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">Ver en que rama estamos ubicados</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git branch`} />
+      </div>
+    </li>
+  </ul>
+</Section>

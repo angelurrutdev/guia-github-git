@@ -1,0 +1,46 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Link from "../../components/ui/Link.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section title="Instalar y Personalizar Git" id="install-and-custom">
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Instalar <b>Git</b>
+      </TitleStep>
+
+      <div class="flex flex-col pl-8">
+        <Link
+          text="Descargar para windows"
+          url="https://git-scm.com/download/win"
+        />
+        <Link
+          text="Descargar para mac"
+          url="https://git-scm.com/download/mac"
+        />
+        <Link
+          text="Descargar para linux"
+          url="https://git-scm.com/download/linux"
+        />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">
+        Abrir la consola <b>Git Bash</b>
+      </TitleStep>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">
+        Personalizar <b>Git</b>
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode
+          code={`git config --global user.name \ngit config --global user.email correo`}
+        />
+      </div>
+    </li>
+  </ul>
+</Section>

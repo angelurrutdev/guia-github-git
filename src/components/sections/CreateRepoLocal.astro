@@ -1,0 +1,36 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section title="Crear repositorio local" id="create-repo-local">
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Crear carpeta <b>.git</b> para rastrear el repositorio
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git init`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">Ver archivos modificados</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git status`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">Agregar todas las modificaciones</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git add -A`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="4">Guardar registro de las modificaciones</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git commit -m "Descripcion"`} />
+      </div>
+    </li>
+  </ul>
+</Section>

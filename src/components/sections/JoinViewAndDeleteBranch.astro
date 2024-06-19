@@ -1,0 +1,30 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section title="Unir, ver y eliminar ramas" id="join-and-view">
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Unir rama master con la rama esperimental
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git merge + "nombre-de-la-rama"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">Consultar todas las ramas del proyecto</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git log --oneline --graph --all`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">Elimina la rama</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git checkout -d + "nombre-de-la-rama"`} />
+      </div>
+    </li>
+  </ul>
+</Section>

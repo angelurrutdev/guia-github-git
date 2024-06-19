@@ -1,0 +1,43 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section
+  title="Regresar a versiones anteriores del proyecto"
+  id="rollback-proyect"
+>
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Crear archivo commits para guardar los commits del proyecto
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git log > commit.txt`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">Buscar los commits en el archivo creado</TitleStep>
+      <div class="ml-8 mt-3">
+        <p class="font-bold text-lg">Copiar el commit</p>
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">
+        Pegar el commit que se busco en el paso 2
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git checkout + "commit"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="4">
+        Si se quiere volver a la ultima version del proyecto
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git checkout "master"`} />
+      </div>
+    </li>
+  </ul>
+</Section>

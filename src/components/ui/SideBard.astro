@@ -1,0 +1,78 @@
+---
+const OPTIONS_GUI = [
+  {
+    name: "Instalar y Personalizar Git",
+    href: "install-and-custom",
+  },
+  {
+    name: "Crear repositorio local",
+    href: "create-repo-local",
+  },
+  {
+    name: "Regresar a versiones anteriores del proyecto",
+    href: "rollback-proyect",
+  },
+  {
+    name: "Formas de Eliminar y Recuperar commits",
+    href: "delete-and-recover-commit",
+  },
+  {
+    name: "Crear ramas",
+    href: "create-branch",
+  },
+  {
+    name: "Unir, ver y eliminar ramas",
+    href: "join-and-view",
+  },
+];
+
+const OPTIONS_GUIHUB = [
+  {
+    name: "Usar GitHub de forma remote",
+    href: "repo-remote",
+  },
+  {
+    name: "Clonar proyectos del repositorio de GitHub",
+    href: "clone-project",
+  },
+  {
+    name: "Actulizar repositorio",
+    href: "update-project",
+  },
+];
+---
+
+<aside
+  class="border-r-[1px] px-3 py-10 h-screen top-16 sticky w-96 hidden md:block"
+>
+  <p class="py-1 px-3 mb-1 text-sm font-bold">Guia de GIT</p>
+  <ul>
+    {
+      OPTIONS_GUI.map(({ name, href }) => (
+        <li>
+          <a
+            class="hover:bg-slate-200  py-1 px-3 mb-1 text-sm font-light rounded-sm block"
+            href={`#${href}`}
+          >
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="py-1 px-3 mb-1 text-sm font-bold mt-7">Guia de GuiHub</p>
+  <ul>
+    {
+      OPTIONS_GUIHUB.map(({ name, href }) => (
+        <li>
+          <a
+            class="hover:bg-slate-200 block py-1 px-3 mb-1 text-sm font-light rounded-sm"
+            href={`#${href}`}
+          >
+            {name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

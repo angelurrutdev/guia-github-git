@@ -1,0 +1,41 @@
+---
+import Icons from "../../components/ui/Icon.astro";
+
+const RRSS = [
+  {
+    nombre: "LinkedIn",
+    url: "https://linkedin.com/in/angelurrutdev",
+    icon: "linkedin",
+  },
+  {
+    nombre: "GitHub",
+    url: "https://github.com/angelurrutdev",
+    icon: "github",
+  },
+];
+---
+
+<footer class="w-full border-t-[1px] border-gray-300 bg-white">
+  <ul class="flex items-center justify-center pt-3 w-100">
+    {
+      RRSS.map(({ url, icon }) => (
+        <li class="mx-2">
+          <a
+            class="block hover:bg-gray-200 p-2 rounded-full "
+            href={url}
+            target="_blank"
+          >
+            <Icons name={icon} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <a
+    target="_blank"
+    href="https://angelurrutdev.vercel.app"
+    class="text-center text-gray-500 block dark:text-gray-400 pb-3 text-md"
+  >
+    Angel Urrutia
+  </a>
+</footer>

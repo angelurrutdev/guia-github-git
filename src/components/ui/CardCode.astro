@@ -1,0 +1,34 @@
+---
+interface Props {
+  code: string;
+}
+
+const { code } = Astro.props;
+---
+
+<pre><code class="git">{code}</code></pre>
+
+<style>
+  pre {
+    background: #282c34;
+    border-radius: 6px;
+    color: #fff;
+    margin: 0;
+    overflow: auto;
+    padding: 5px;
+  }
+
+  code,
+  pre {
+    font-family: Consolas, Menlo, Monaco, source-code-pro, monospace;
+    hyphens: none;
+    line-height: 1.5;
+    overflow: auto;
+    tab-size: 2;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+  }
+</style>

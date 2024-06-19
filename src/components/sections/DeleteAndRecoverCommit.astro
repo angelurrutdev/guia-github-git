@@ -1,0 +1,41 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section
+  title="Formas de Eliminar y Recuperar commits"
+  id="delete-and-recover-commit"
+>
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">Eliminar el commit mantiendo el codigo.</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git reset --soft + "commit"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">
+        Eliminar el <b>stagint-area</b> mantiendo el codigo.
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git reset --mixt + "commit"`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">Eliminar el commit</TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git reset --hard`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="4">
+        Guardar lo que se borro con la ultima version del commit
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git reset --hard + "commit"`} />
+      </div>
+    </li>
+  </ul>
+</Section>

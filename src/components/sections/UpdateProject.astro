@@ -1,0 +1,39 @@
+---
+import TitleStep from "../../components/ui/TitleStep.astro";
+import CardCode from "../../components/ui/CardCode.astro";
+import Section from "../../components/ui/Section.astro";
+---
+
+<Section
+  title="Actualizar el proyecto y subir cambios en repositorio de GitHub"
+  id="update-project"
+>
+  <ul class="pl-5">
+    <li class="mb-6">
+      <TitleStep number="1">
+        Hacer una copia del repositorio para poder realizar cambios y actualizar
+        el proyecto y subir commits nuevos
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git fetch origin`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="2">
+        Unir el repositorio remoto con el repositorio local para poder trabajar
+        con la ultima version del proyecto
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git merge origin/master`} />
+      </div>
+    </li>
+    <li class="mb-6">
+      <TitleStep number="3">
+        Subir todos los commits al repositorio de github
+      </TitleStep>
+      <div class="ml-8 mt-3">
+        <CardCode code={`git push -u origin master`} />
+      </div>
+    </li>
+  </ul>
+</Section>
